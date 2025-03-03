@@ -52,13 +52,4 @@ INSERT INTO orders (user_id, total_price, status, payment_status, created_at) VA
 (1, 48.97, 'pending', 'unpaid', '2025-03-02 08:19:56');
 
 
-CREATE TABLE payments (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    payment_id VARCHAR(255) NOT NULL,
-    order_id VARCHAR(255) NOT NULL,
-    amount DECIMAL(10,2) NOT NULL,
-    currency VARCHAR(10) NOT NULL,
-    status ENUM('pending', 'success', 'failed') DEFAULT 'pending',
-    method VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+
